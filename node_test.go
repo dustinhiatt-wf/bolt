@@ -16,6 +16,7 @@ func TestNode_put(t *testing.T) {
 	if len(n.inodes) != 3 {
 		t.Fatalf("exp=3; got=%d", len(n.inodes))
 	}
+
 	if k, v := n.inodes[0].key, n.inodes[0].value; string(k) != "bar" || string(v) != "1" {
 		t.Fatalf("exp=<bar,1>; got=<%s,%s>", k, v)
 	}
